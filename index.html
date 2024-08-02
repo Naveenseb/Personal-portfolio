@@ -38,13 +38,36 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1><br>
-                    <p class="about-sec">My name is Naveen S Pananthanam, and I am a dedicated and passionate computer engineering graduate. 
+                <p class="about-sec">
+                    My name is Naveen S Pananthanam, and I am a dedicated and passionate computer engineering graduate. 
                     I have a strong foundation in computer science principles, combined with hands-on experience in software development,
                     system architecture, and hardware integration. My educational journey has equipped me with a diverse skill set, 
-                    allowing me to approach problems from multiple perspectives and develop innovative solutions.</p>
+                    allowing me to approach problems from multiple perspectives and develop innovative solutions.
+                </p>
+                <div id="more-content" style="display: none;">
+                    <p class="about-sec">
+                        I graduated with a degree in Computer Engineering, which has provided me with a solid understanding of computer
+                        science and practical skills in various programming languages such as
+                        Python, Java, and C++. I have experience with web development frameworks and tools like
+                        HTML, CSS, JavaScript, and React. Additionally, I am knowledgeable in database management systems, 
+                        network protocols, and cybersecurity principles.</p>
+                    <p class="about-sec">
+                        My professional goal is to continue growing as a computer engineer, leveraging my skills to develop 
+                        impactful and sustainable solutions. I aspire to work on cutting-edge technologies and contribute to projects 
+                        that make a significant difference in people's lives. On a personal level, I aim to stay curious, continuously learning 
+                        and adapting to new technologies and methodologies.</p>
+                    <p class="about-sec">
+                        I am an active and fast learner, always eager to study new things. I take pride in being adaptable and a team player,
+                        qualities that help me thrive in collaborative environments. One of my core values is making others happy,
+                        and I believe that a positive attitude can greatly enhance any team dynamic. Outside of my professional interests,
+                        I love to travel and play football, activities that keep me energized and inspired.
 
-                    <button class='glowing-btn'> <span class='glowing-txt'>R<span class='faulty-letter'>EA</span>D MORE</span></button>
-
+                    </p>
+                </div>
+                <button class='glowing-btn' onclick="toggleContent()"> 
+                    <span class='glowing-txt'>R<span class='faulty-letter'>EA</span>D MORE</span>
+                </button>
+                
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -76,6 +99,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    function toggleContent() {
+        var moreContent = document.getElementById("more-content");
+        var button = document.querySelector('.glowing-btn .glowing-txt');
+    
+        if (moreContent.style.display === "none") {
+            moreContent.style.display = "block";
+            button.innerHTML = "R<span class='faulty-letter'>EA</span>D LESS";
+        } else {
+            moreContent.style.display = "none";
+            button.innerHTML = "R<span class='faulty-letter'>EA</span>D MORE";
+        }
+    }
+</script>
+
 <!-- ---------services---------------- -->
 <div id="services">
     <div class="container">
